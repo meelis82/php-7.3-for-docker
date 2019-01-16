@@ -7,8 +7,5 @@ class build::drush {
 
   bash_exec { "su - container -c 'mkdir /home/container/.drush'": }
 
-  include build::drush::drush5
-  include build::drush::drush6
-  include build::drush::drush7
   include build::drush::drush8
 }
