@@ -29,10 +29,6 @@ class run::php71 {
     include run::php71::ini::xdebug
   }
 
-  if $php_ini_memcached == "On" {
-    include run::php71::ini::memcached
-  }
-
   if $php_ini_redis == "On" {
     include run::php71::ini::redis
   }
