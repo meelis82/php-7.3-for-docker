@@ -4,6 +4,7 @@ class build::php73::packages {
       'libxml2-dev',
       'libssl-dev',
       'libbz2-dev',
+      'libzip-dev',
       'libcurl4-openssl-dev',
       'libjpeg-dev',
       'libpng12-dev',
