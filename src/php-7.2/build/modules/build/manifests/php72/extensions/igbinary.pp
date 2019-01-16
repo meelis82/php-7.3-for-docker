@@ -1,9 +1,9 @@
-class build::php71::extensions::igbinary {
-  require build::php71
+class build::php72::extensions::igbinary {
+  require build::php72
 
   file { '/tmp/igbinary7-master.zip':
     ensure => present,
-    source => 'puppet:///modules/build/tmp/php71/extensions/igbinary/igbinary7-master.zip'
+    source => 'puppet:///modules/build/tmp/php72/extensions/igbinary/igbinary7-master.zip'
   }
 
   bash_exec { 'cd /tmp && unzip igbinary7-master.zip':

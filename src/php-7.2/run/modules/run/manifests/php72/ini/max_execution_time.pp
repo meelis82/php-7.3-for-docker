@@ -1,7 +1,7 @@
-class run::php71::ini::max_execution_time {
+class run::php72::ini::max_execution_time {
   file { '/usr/local/src/phpfarm/inst/current/etc/conf.d/max_execution_time.ini':
     ensure => present,
-    content => template('run/php71/ini/max_execution_time.ini.erb'),
+    content => template('run/php72/ini/max_execution_time.ini.erb'),
     mode => 644
   }
 }

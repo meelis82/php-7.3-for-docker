@@ -1,7 +1,7 @@
 class run {
   require run::user
 
-  include run::php71
+  include run::php72
   include run::smtp
   include run::drush
   include run::timezone

@@ -1,7 +1,7 @@
-class run::php71::ini::timezone {
+class run::php72::ini::timezone {
   file { '/usr/local/src/phpfarm/inst/current/etc/conf.d/timezone.ini':
     ensure => present,
-    content => template('run/php71/ini/timezone.ini.erb'),
+    content => template('run/php72/ini/timezone.ini.erb'),
     mode => 644
   }
 }

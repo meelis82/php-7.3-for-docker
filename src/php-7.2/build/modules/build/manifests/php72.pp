@@ -1,6 +1,6 @@
-class build::php71 {
-  require build::php71::packages
-  require build::php71::supervisor
+class build::php72 {
+  require build::php72::packages
+  require build::php72::supervisor
   require build::phpfarm
 
   bash_exec { 'mkdir -p /usr/local/src/phpfarm/inst/php-7.2.14/etc/conf.d': }

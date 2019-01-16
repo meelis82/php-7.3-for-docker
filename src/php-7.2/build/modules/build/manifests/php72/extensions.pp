@@ -1,6 +1,6 @@
-class build::php71::extensions {
-  require build::php71
+class build::php72::extensions {
+  require build::php72
 
-  include build::php71::extensions::xdebug
-  include build::php71::extensions::redis
+  include build::php72::extensions::xdebug
+  include build::php72::extensions::redis
 }

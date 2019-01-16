@@ -1,4 +1,4 @@
-class build::php71::packages {
+class build::php72::packages {
   package {[
       'build-essential',
       'libxml2-dev',

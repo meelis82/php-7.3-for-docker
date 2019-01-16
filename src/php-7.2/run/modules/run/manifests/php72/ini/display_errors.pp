@@ -1,7 +1,7 @@
-class run::php71::ini::display_errors {
+class run::php72::ini::display_errors {
   file { '/usr/local/src/phpfarm/inst/current/etc/conf.d/display_errors.ini':
     ensure => present,
-    content => template('run/php71/ini/display_errors.ini.erb'),
+    content => template('run/php72/ini/display_errors.ini.erb'),
     mode => 644
   }
 }

@@ -1,7 +1,7 @@
 class build::drush {
   require build::user
-  require build::php71
-  require build::php71::extensions
+  require build::php72
+  require build::php72::extensions
   require build::composer
   require build::drush::packages
 
