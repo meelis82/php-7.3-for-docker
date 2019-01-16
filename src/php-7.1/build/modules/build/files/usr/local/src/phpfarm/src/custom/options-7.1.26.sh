@@ -20,6 +20,8 @@ configoptions="--with-libdir=/lib/x86_64-linux-gnu \
   --with-jpeg-dir=/usr \
   --with-png-dir=/usr \
   --with-mhash \
+  --with-imap \
+  --with-imap-ssl \
   --with-mcrypt \
   --with-mysqli \
   --with-mysql \
