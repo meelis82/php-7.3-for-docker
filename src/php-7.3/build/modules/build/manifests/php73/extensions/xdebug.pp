@@ -1,31 +1,31 @@
 class build::php73::extensions::xdebug {
   require build::php73
 
-  file { '/tmp/xdebug-2.7.0beta1.tgz':
+  file { '/tmp/xdebug-2.7.0RC2.tgz':
     ensure => present,
-    source => 'puppet:///modules/build/tmp/xdebug-2.7.0beta1.tgz'
+    source => 'puppet:///modules/build/tmp/xdebug-2.7.0RC2.tgz'
   }
 
-  bash_exec { 'cd /tmp && tar xzf xdebug-2.7.0beta1.tgz':
-    require => File['/tmp/xdebug-2.7.0beta1.tgz']
+  bash_exec { 'cd /tmp && tar xzf xdebug-2.7.0RC2.tgz':
+    require => File['/tmp/xdebug-2.7.0RC2.tgz']
   }
 
-  bash_exec { 'cd /tmp/xdebug-2.7.0beta1 && phpize-7.3.2':
-    require => Bash_exec['cd /tmp && tar xzf xdebug-2.7.0beta1.tgz']
+  bash_exec { 'cd /tmp/xdebug-2.7.0RC2 && phpize-7.3.2':
+    require => Bash_exec['cd /tmp && tar xzf xdebug-2.7.0RC2.tgz']
   }
 
-  bash_exec { 'cd /tmp/xdebug-2.7.0beta1 && ./configure --with-php-config=/usr/local/src/phpfarm/inst/bin/php-config-7.3.2':
+  bash_exec { 'cd /tmp/xdebug-2.7.0RC2 && ./configure --with-php-config=/usr/local/src/phpfarm/inst/bin/php-config-7.3.2':
     timeout => 0,
-    require => Bash_exec['cd /tmp/xdebug-2.7.0beta1 && phpize-7.3.2']
+    require => Bash_exec['cd /tmp/xdebug-2.7.0RC2 && phpize-7.3.2']
   }
 
-  bash_exec { 'cd /tmp/xdebug-2.7.0beta1 && make':
+  bash_exec { 'cd /tmp/xdebug-2.7.0RC2 && make':
     timeout => 0,
-    require => Bash_exec['cd /tmp/xdebug-2.7.0beta1 && ./configure --with-php-config=/usr/local/src/phpfarm/inst/bin/php-config-7.3.2']
+    require => Bash_exec['cd /tmp/xdebug-2.7.0RC2 && ./configure --with-php-config=/usr/local/src/phpfarm/inst/bin/php-config-7.3.2']
   }
 
-  bash_exec { 'cd /tmp/xdebug-2.7.0beta1 && make install':
+  bash_exec { 'cd /tmp/xdebug-2.7.0RC2 && make install':
     timeout => 0,
-    require => Bash_exec['cd /tmp/xdebug-2.7.0beta1 && make']
+    require => Bash_exec['cd /tmp/xdebug-2.7.0RC2 && make']
   }
 }

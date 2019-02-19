@@ -9,8 +9,6 @@ class build::php73 {
 
   bash_exec { 'mkdir -p /usr/local/src/phpfarm/inst/php-7.3.2/etc/pool.d': }
 
-  bash_exec { 'mkdir -p /usr/local/src/phpfarm/inst/php-7.3.2/lib/php/extensions/no-debug-non-zts-20131226': }
-
   file { '/tmp/php-7.3.2.tar.gz':
     ensure => present,
     source => 'puppet:///modules/build/tmp/php-7.3.2.tar.gz'
