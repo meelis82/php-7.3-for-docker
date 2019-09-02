@@ -18,6 +18,10 @@ class run {
     include run::redis
   }
 
+  if $freetds_1_server_name {
+    include run::freetds
+  }
+
   file { '/home/container/.bashrc':
     ensure => present,
     content => template('run/.bashrc.erb'),
