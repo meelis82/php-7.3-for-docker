@@ -3,6 +3,7 @@ class build {
 
   include build::php73
   include build::php73::extensions
+  include build::freetds
   include build::composer
   include build::drush
   include build::postfix

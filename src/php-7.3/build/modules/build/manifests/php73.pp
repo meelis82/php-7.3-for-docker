@@ -2,6 +2,7 @@ class build::php73 {
   require build::php73::packages
   require build::php73::supervisor
   require build::phpfarm
+  require build::freetds
 
   bash_exec { 'mkdir -p /usr/local/src/phpfarm/inst/php-7.3.8/etc/conf.d': }
 
