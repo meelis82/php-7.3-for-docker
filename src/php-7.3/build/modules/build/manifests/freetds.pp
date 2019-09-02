@@ -26,7 +26,7 @@ class build::freetds {
   file { '/usr/lib/x86_64-linux-gnu/libsybdb.so.5':
     ensure => link,
     target => '/usr/local/freetds/lib/libsybdb.so.5',
-    require => Bash_exec['cd /tmp/freetds-0.1.1.15 && make install']
+    require => Bash_exec['cd /tmp/freetds-1.1.15 && make install']
   }
 
   bash_exec { 'mkdir -p /usr/local/freetds/lib/x86_64-linux-gnu':
