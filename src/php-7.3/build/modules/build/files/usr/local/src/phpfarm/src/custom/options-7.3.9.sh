@@ -35,7 +35,6 @@ configoptions="--with-libdir=/lib/x86_64-linux-gnu \
   --with-ldap=/usr \
   --with-config-file-scan-dir=/usr/local/src/phpfarm/inst/php-7.3.9/etc/conf.d \
   --with-readline \
-  --with-mssql=/usr/local/freetds \
-  --enable-msdblib \
+  --with-pdo-dblib=/usr/local/freetds \
   --with-freetype-dir \
 "
