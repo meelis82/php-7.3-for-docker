@@ -34,6 +34,6 @@
         port = <%= eval("@freetds_#{i}_port") %>
         tds version = <%= eval("@freetds_#{i}_tds_version") %>
         client charset = <%= eval("@freetds_#{i}_client_charset") %>
-
+        mssql.charset = "<%= eval("@freetds_#{i}_client_charset") %>"
 <% end -%>
 <% end -%>
