@@ -21,7 +21,8 @@ class build::php73::packages {
       'libreadline-dev',
       'libfreetype6-dev',
       'imagemagick',
-      'unixodbc'
+      'unixodbc',
+      'unixodbc-dev'
     ]:
     ensure => present
   }
