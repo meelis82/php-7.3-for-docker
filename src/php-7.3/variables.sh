@@ -353,6 +353,20 @@ for VARIABLE in $(env); do
   fi
 done
 
+for VARIABLE in $(env); do
+  if [[ "${VARIABLE}" =~ ^ODBC_[[:digit:]]+_SERVERNAME=.*$ ]]; then
+    i="$(echo ${VARIABLE} | awk -F '_' '{ print $2 }')"
+
+    ODBC_NAME="ODBC_${i}_SERVERNAME"
+    ODBC_SERVERNAME="ODBC_${i}_SERVERNAME"
+    ODBC_DATABASE="ODBC_${i}_DATABASE"
+
+    export "FACTER_${ODBC_NAME}=${!ODBC_NAME}"
+    export "FACTER_${ODBC_SERVERNAME}=${!ODBC_SERVERNAME}"
+    export "FACTER_${ODBC_DATABASE}=${!ODBC_DATABASE}"
+  fi
+done
+
 if [ -z "${MYSQL_MAX_ALLOWED_PACKET}" ]; then
   MYSQL_MAX_ALLOWED_PACKET="512M"
 fi
