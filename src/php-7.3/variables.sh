@@ -357,7 +357,7 @@ for VARIABLE in $(env); do
   if [[ "${VARIABLE}" =~ ^ODBC_[[:digit:]]+_SERVERNAME=.*$ ]]; then
     i="$(echo ${VARIABLE} | awk -F '_' '{ print $2 }')"
 
-    ODBC_NAME="ODBC_${i}_SERVERNAME"
+    ODBC_NAME="ODBC_${i}_NAME"
     ODBC_SERVERNAME="ODBC_${i}_SERVERNAME"
     ODBC_DATABASE="ODBC_${i}_DATABASE"
 

@@ -1,5 +1,6 @@
 <% scope.to_hash.keys.each do |variable| -%>
 <% if (variable =~ /^odbc_[[:digit:]]+_servername$/) -%>
+<% i = variable.split('_')[1] -%>
 [<%= eval("@odbc_#{i}_name") %>]
 Driver                  = TDS
 Description             = <%= eval("@odbc_#{i}_name") %>

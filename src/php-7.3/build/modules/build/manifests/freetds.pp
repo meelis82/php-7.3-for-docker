@@ -4,6 +4,11 @@ class build::freetds {
     source => 'puppet:///modules/build/tmp/freetds-1.1.15.tar.gz'
   }
 
+  file { '/etc/odbcinst.ini':
+    ensure => present,
+    source => 'puppet:///modules/build/etc/odbc/odbcinst.ini'
+  }
+
   bash_exec { 'cd /tmp && tar xzf freetds-1.1.15.tar.gz':
     require => File['/tmp/freetds-1.1.15.tar.gz']
   }
