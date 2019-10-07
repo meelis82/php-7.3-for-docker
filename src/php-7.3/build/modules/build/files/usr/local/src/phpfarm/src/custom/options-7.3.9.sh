@@ -33,7 +33,7 @@ configoptions="--with-libdir=/lib/x86_64-linux-gnu \
   --with-gettext \
   --with-pspell \
   --with-ldap=/usr \
-  --with-config-file-scan-dir=/usr/local/src/phpfarm/inst/php-7.3.9/etc/conf.d \
+  --with-config-file-scan-dir=/usr/local/src/phpfarm/inst/php-7.3.10/etc/conf.d \
   --with-readline \
   --with-pdo-dblib=/usr/local/freetds \
   --with-pdo-odbc=unixODBC,/usr \
