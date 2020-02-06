@@ -7,9 +7,14 @@ class run::drush::drush8 {
       target => '/usr/local/src/drush8/drush'
     }
 
+    file { '/etc/bash_completion.d':
+      ensure => directory,
+    }
+
     file { '/etc/bash_completion.d/drush.complete.sh':
       ensure => link,
-      target => '/usr/local/src/drush8/drush.complete.sh'
+      target => '/usr/local/src/drush8/drush.complete.sh',
+      require => File['/etc/bash_completion.d']
     }
 
     bash_exec { "chown -R -h $user_id /usr/local/src/drush8": }

@@ -10,18 +10,18 @@ class build::php73::extensions::xdebug {
     require => File['/tmp/xdebug-2.7.2.tgz']
   }
 
-  bash_exec { 'cd /tmp/xdebug-2.7.2 && phpize-7.3.12':
+  bash_exec { 'cd /tmp/xdebug-2.7.2 && phpize-7.3.14':
     require => Bash_exec['cd /tmp && tar xzf xdebug-2.7.2.tgz']
   }
 
-  bash_exec { 'cd /tmp/xdebug-2.7.2 && ./configure --with-php-config=/usr/local/src/phpfarm/inst/bin/php-config-7.3.12':
+  bash_exec { 'cd /tmp/xdebug-2.7.2 && ./configure --with-php-config=/usr/local/src/phpfarm/inst/bin/php-config-7.3.14':
     timeout => 0,
-    require => Bash_exec['cd /tmp/xdebug-2.7.2 && phpize-7.3.12']
+    require => Bash_exec['cd /tmp/xdebug-2.7.2 && phpize-7.3.14']
   }
 
   bash_exec { 'cd /tmp/xdebug-2.7.2 && make':
     timeout => 0,
-    require => Bash_exec['cd /tmp/xdebug-2.7.2 && ./configure --with-php-config=/usr/local/src/phpfarm/inst/bin/php-config-7.3.12']
+    require => Bash_exec['cd /tmp/xdebug-2.7.2 && ./configure --with-php-config=/usr/local/src/phpfarm/inst/bin/php-config-7.3.14']
   }
 
   bash_exec { 'cd /tmp/xdebug-2.7.2 && make install':
