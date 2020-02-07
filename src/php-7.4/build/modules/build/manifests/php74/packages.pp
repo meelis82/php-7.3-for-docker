@@ -24,7 +24,9 @@ class build::php74::packages {
       'imagemagick',
       'unixodbc',
       'unixodbc-dev',
-      'bash-completion'
+      'bash-completion',
+      'libsqlite3-dev',
+      'libonig-dev'
     ]:
     ensure => present
   }
