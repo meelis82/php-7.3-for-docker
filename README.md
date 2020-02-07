@@ -1,6 +1,6 @@
-# php-7.3-for-docker
+# php-7.4-for-docker
 
-A Docker image for [PHP](http://php.net/) version 7.3 that runs PHP in FPM (FastCGI Process Manager) mode.
+A Docker image for [PHP](http://php.net/) version 7.4 that runs PHP in FPM (FastCGI Process Manager) mode.
 
 ## Run the container
 
