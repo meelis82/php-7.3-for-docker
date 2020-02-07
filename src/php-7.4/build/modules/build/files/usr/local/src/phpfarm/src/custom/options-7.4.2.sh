@@ -1,7 +1,6 @@
 configoptions="--with-libdir=/lib/x86_64-linux-gnu \
   --disable-debug \
   --enable-fpm \
-  --enable-gd-native-ttf \
   --enable-exif \
   --enable-ftp \
   --enable-bcmath \
@@ -9,22 +8,19 @@ configoptions="--with-libdir=/lib/x86_64-linux-gnu \
   --enable-soap \
   --enable-calendar \
   --enable-mbstring \
-  --enable-zip \
+  --with-zip \
   --enable-pcntl \
   --with-pgsql \
   --with-pdo-pgsql \
   --with-fpm-user=container \
   --with-fpm-group=container \
   --with-curl \
-  --with-gd \
-  --with-jpeg-dir=/usr \
-  --with-png-dir=/usr \
-  --with-xpm-dir=/usr \
-  --with-webp-dir=/usr \
+  --enable-gd \
+  --with-jpeg \
+  --with-xpm \
+  --with-webp \
   --with-mhash \
-  --with-mcrypt \
   --with-mysqli \
-  --with-mysql \
   --with-pdo-mysql \
   --with-iconv \
   --with-pear \
@@ -39,5 +35,5 @@ configoptions="--with-libdir=/lib/x86_64-linux-gnu \
   --with-readline \
   --with-pdo-dblib=/usr/local/freetds \
   --with-pdo-odbc=unixODBC,/usr \
-  --with-freetype-dir \
+  --with-freetype \
 "
