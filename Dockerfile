@@ -1,4 +1,4 @@
-FROM php:7.4-fpm-buster
+FROM php:7.3-fpm-buster
 RUN mkdir -p /apache/data
 WORKDIR /apache/data
 
@@ -39,7 +39,7 @@ RUN apt-get update && apt-get install -y \
     && pecl install apcu igbinary redis xdebug \
     && docker-php-ext-enable apcu igbinary redis xdebug \
     && docker-php-ext-configure \
-        gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ --with-webp \
+        gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-webp-dir \
     && docker-php-ext-install -j$(nproc) \
         curl \
         dom \
@@ -62,7 +62,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN curl -sL https://getcomposer.org/installer | php -- --install-dir /usr/bin --filename composer && composer global require drush/drush:8.* && ln -s /root/.composer/vendor/drush/drush/drush /usr/local/bin/drush
 
-RUN groupadd -g 1000 container && userdel www-data && useradd -d /apache/data -o -s /bin/bash -u 1000 -g 1000 container
+RUN groupadd -g 1000 container && userdel www-data && useradd -d /home/container -o -s /bin/bash -u 1000 -g 1000 container
 
 COPY www.conf /usr/local/etc/php-fpm.d/www.conf
 COPY php.ini /usr/local/etc/php/conf.d/php.ini
